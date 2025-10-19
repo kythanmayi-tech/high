@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NetMorph: Network Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🚀 NetMorph</h1>
+    <p>Simulate. Compare`. Optimize.</p>
+  </header>
+
+  <section class="form-section">
+    <h2>Run a Simulation</h2>
+    <label for="profile">Choose a network profile:</label>
+    <select id="profile">
+      <option value="wifi">Wi-Fi</option>
+      <option value="4g">4G</option>
+      <option value="3g">3G</option>
+      <option value="2g">2G</option>
+    </select>
+    <button onclick="simulate()">Simulate</button>
+    <button onclick="resetChart()">Reset</button>
+    <div id="loading">Simulating...</div>
+  </section>
+
+  <section class="insights">
+    <h2>📊 Simulation Results</h2>
+    <canvas id="chart" width="600" height="300"></canvas>
+    <div id="narrativeBox"></div>
+  </section>
+
+  <section class="fallacy-meter">
+    <h3>Fallacy Meter</h3>
+    <div id="meterBar"><span id="meterValue">0%</span></div>
+  </section>
+
+  <section class="logs">
+    <h2>📜 Recent Simulations</h2>
+    <ul id="logList"></ul>
+    <button onclick="loadLogs()">Refresh Logs</button>
+  </section>
+
+  <footer>
+    <p>NetMorph 2025</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
